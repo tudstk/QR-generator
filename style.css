@@ -19,6 +19,8 @@ body{
     border-radius: 7px;
     max-width: 400px;
     padding:20px 25px;
+    height:230px;
+    transition: 0.2s ease;
 }
 
 header h1{
@@ -43,7 +45,6 @@ header p{
     background-color: coral;
     color:#fff;
     cursor:pointer;
-    pointer-events: none;
     border:1px solid rgb(202, 80, 35);
 }
 .form :where(input, button){
@@ -55,4 +56,19 @@ header p{
 .qr-code{
     display: flex;
     justify-content:center;
+    border:1px solid #ccc;
+    border-radius:5px;
+    padding:25px 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.wrapper.active{
+    height: 450px;
+}
+
+.wrapper.active .qr-code{
+    opacity: 100%;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
 }
